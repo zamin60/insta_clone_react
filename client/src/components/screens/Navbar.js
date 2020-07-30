@@ -11,18 +11,19 @@ const Navbar=()=>{
     console.log("in navbar")
     if(state){
       return [<li><Link to="/profile">Profile</Link></li>,
-      <li><Link to="/create">Create Post</Link></li>,
-      <li>
-           <button className="btn #c62828 red darken-3" type="submit" name="action"
-            onClick={()=>{localStorage.clear()
-            dispatch({type:"CLEAR"})
-            history.push("/signin")
-            }}>
-                Login
-            </button>
+              <li><Link to="/create">Create Post</Link></li>,
+              <li><Link to="/myfollowingpost">My following Posts</Link></li>,
+            <li>
+            <button className="btn #c62828 red darken-3" type="submit" name="action"
+              onClick={()=>{localStorage.clear()
+              dispatch({type:"CLEAR"})
+              history.push("/signin")
+              }}>
+                  Login
+             </button>
 
-      </li>]
-    }
+             </li>]
+            }
     else{
       return [<li><Link to="/signin">Login</Link></li>,
       <li><Link to="/signup">Signup</Link></li>
