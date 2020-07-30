@@ -19,7 +19,7 @@ const Navbar=()=>{
               dispatch({type:"CLEAR"})
               history.push("/signin")
               }}>
-                  Login
+                  Logout
              </button>
 
              </li>]
