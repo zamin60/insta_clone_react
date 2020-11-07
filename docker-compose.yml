@@ -1,0 +1,21 @@
+version: '2'
+networks: 
+    wn:
+        driver: bridge
+services:
+    frontend:
+        build: ./client
+        stdin_open: true
+        tty: true
+        ports:
+            - "80:3000"
+        depends_on:
+            - backend
+        networks: 
+            - wn
+    backend:
+        build: ./server
+        ports:
+            - "5000:5000"
+        networks: 
+            - wn
